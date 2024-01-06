@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+body.white {
+  padding: 10px;
+  min-height: 100vh;
+  background-color: #030205;
+  color: #fff;
+  transition: all 0.6s;
+}
+
+body.white {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+
+#nav {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(19, 3, 38);
+  border-radius: 10px;
+}
+
+#nav a {
+  padding: 10px;
+  background-color: rgb(29, 13, 48);
+  color: #ffc207;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#nav a:hover {
+  background-color: #27173a;
+}
+
+.oniDrugi {
+  text-decoration: none;
+}
+
+.radio-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 60px;
+  padding: 10px;
+  background-color: #27173a;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.radio-btn .radio-inner {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #ffc207;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner.active {
+  transform: translate(calc(150px - 110px));
+}
+
+.radio-btn .radio-inner.active::before {
+  left: -25px;
+  transform: scale(1);
+}
+
+#celaStrana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 5vh;
+}
+
+#sve {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.item {
+  padding: 10px;
+}
+
+#zaGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+input {
+  background-color: #ffc207;
+  color: black;
+  border-radius: 5px;
+}
+
+.inputTekst {
+  width: 250px;
+}
+
+#subBut {
+  padding: 5px;
+}
+
+#subBut:hover {
+  background-color: #27173a;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+select {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mehanizam {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+select {
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #27173a;
+  color: white;
+}
+
+select:hover {
+  background-color: #27173a;
+  color: white;
+}
+
+#triSaTri {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.legende {
+  width: 250px;
+  height: 300px;
+  padding-bottom: 20px;
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+@media all and (max-width: 1080px) {
+  #triSaTri {
+    grid-template-columns: 1fr 1fr;
+  }
+  .naslov {
+    grid-column: span 2;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  #nav {
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
+  }
+  #nav a {
+    padding: 5px;
+  }
+  #sve {
+    display: flex;
+    flex-direction: column;
+  }
+  #zaGrid {
+    width: 100%;
+  }
+  #triSaTri {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    margin-bottom: 50px;
+  }
+}
